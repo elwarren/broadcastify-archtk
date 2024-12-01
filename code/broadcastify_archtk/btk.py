@@ -1012,7 +1012,7 @@ class ArchiveTimesTable:
             # Grab the start & end times from the row's <td> tags
             file_start, file_end = self._get_entry_datetimes(
                                     [(each.text) for each
-                                     in row.find_all('td')])
+                                     in row.find_all('td')][0:2])
 
             # Grab the file ID
             file_uri = row.find('a')['href'].split('/')[-1]
